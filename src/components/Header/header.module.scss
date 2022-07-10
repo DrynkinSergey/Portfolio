@@ -1,0 +1,15 @@
+.header {
+  background-image: url("HeaderImgTop.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  ul {
+    display: flex;
+
+    li {
+      list-style: none;
+      margin-right: 65px;
+    }
+  }
+}
