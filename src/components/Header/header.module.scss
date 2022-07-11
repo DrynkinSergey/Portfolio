@@ -1,15 +1,43 @@
 .header {
-  background-image: url("HeaderImgTop.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  color: white;
+  letter-spacing: .3rem;
+  position: relative;
   height: 100vh;
+
+  img{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 180vh;
+  }
   ul {
     display: flex;
-
+    .active {
+      color:red;
+      font-weight: bold;
+      background-image: url("Active.png");
+      background-position: 11px 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
     li {
+
+      padding:24px 30px;
       list-style: none;
       margin-right: 65px;
+      margin: 20px 0;
+      color: #928A97;
+
     }
+  }
+  .aboutMe{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 980px;
+  h2 span{
+    color:yellow;
+  }
   }
 }
