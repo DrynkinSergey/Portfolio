@@ -1,0 +1,33 @@
+.content {
+
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "left skillsImg ";
+
+  .skillsImg {
+    width: 50%;
+    top: 0;
+    right: 15%;
+  }
+
+  .sectionName {
+    color: red;
+
+  }
+
+  .sectionTitle {
+    max-width: 600px;
+  }
+}
+.skills{
+  position: relative;
+  .bg{
+    position: absolute;
+    right: 0;
+    top: -50%;
+  }
+}

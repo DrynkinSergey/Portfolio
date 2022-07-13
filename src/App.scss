@@ -3,7 +3,7 @@ body{
 }
 *{
   margin: 0;
-  padding: 0;
+
   font-family: 'Edu QLD Beginner', cursive;
 
 }
@@ -12,43 +12,17 @@ body{
   justify-content: center;
   align-items: center;
 }
-.aboutMe__content{
-  width: 100%;
-  max-height: 980px;
-  display: flex;
-  justify-content: space-between;
-  h1{
-    color: red;
-    font-weight: 700;
-  }
-  p{
-   max-width: 600px;
-   line-height: 40px;
-   font-size: 24px;
- }
-  .pict{
-    width: 50%;
-  }
-  .right{
-    width: 50%;
-  }
-}
+
 .container {
   max-width: 1460px;
-  padding: 0 15px;
   margin: 0 auto;
 }
-.btn{
-  background-color: #000C24;
-  padding: 10px;
-  color:white;
-  border-radius: 8px;
-  font-size: 18px;
-  margin: 20px 0;
-  &:hover{
-    cursor: pointer;
-  }
+
+section{
+  padding: 80px 15px;
+
 }
+
 
 
 
