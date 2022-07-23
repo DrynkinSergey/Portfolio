@@ -1,0 +1,54 @@
+.contact{
+  background-image: url("../../assets/img/getInTouch.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__content{
+    display: grid;
+    background-color: white;
+    padding: 80px 15px;
+    grid-template-areas: 'h1 data';
+    align-items: center;
+    justify-content: center;
+    h1{
+      font-weight: 600;
+      font-size: 38px;
+      line-height: 46px;
+      max-width: 75%;
+    }
+    .data{
+      font-size: 1.2rem;
+
+      h2{
+        color: red;
+        margin-bottom: 20px;
+      }
+      input{
+        width: 100%;
+        border: 1px solid #000000;
+        border-radius: 4px;
+        padding: 9px;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+        &:focus{
+          box-shadow: 0 5px 6px 0 #787878;
+          outline: transparent;
+          border-color: #61dafb;
+        }
+      }
+      button{
+        background: #000C24;
+        border-radius: 4px;
+        color:white;
+        padding: 10px 37px;
+        transition: all .2s ease-in;
+        &:hover{
+          cursor: pointer;
+          color:red;
+          box-shadow: 0 5px 6px 0 #787878;
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}

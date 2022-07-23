@@ -1,0 +1,36 @@
+.content{
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "worksImg right";
+  .bg{
+    position: absolute;
+    left: 5%;
+    z-index: -2;
+  }
+  .worksImg {
+    width: 50%;
+    top: 0;
+    left: 15%;
+  }
+  .itemBg{
+    position: absolute;
+    left: 117px;
+    top: 0;
+    z-index: -3;
+  }
+
+  .sectionName {
+    color: red;
+
+  }
+
+  .sectionTitle {
+    max-width: 600px;
+  }
+}
+
