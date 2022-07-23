@@ -10,7 +10,7 @@ const ContactMe = () => {
                     <h2>Get in Touch</h2>
                     <input type="text" placeholder='Name'/>
                     <input type="text" placeholder='Email'/>
-                    <input type="text" placeholder='Message'/>
+                    <textarea  placeholder='Message'/>
                     <button>Send message</button>
                 </div>
             </form>

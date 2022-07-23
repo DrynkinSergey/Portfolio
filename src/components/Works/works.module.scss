@@ -7,6 +7,83 @@
   align-items: center;
   grid-template-areas:
     "worksImg right";
+  .worksInfo{
+    h2{
+      color: red;
+      margin-bottom: 10px;
+    }
+    .totalProjects{
+      &__item{
+        width: 100px;
+        height: 7px;
+        border: none;
+        background: #c6b9ca;
+        margin-right: 10px;
+        transition: all .2s ease-in;
+
+        &__active{
+          background: #000C24;
+        }
+        &:hover{
+          cursor: pointer;
+          box-shadow: 0 5px 6px 0 #cfcfcf;
+        }
+      }
+    }
+    .worksBtns{
+      padding: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      .technologyBtn{
+        border: none;
+        color: white;
+        font-size: 1.1rem;
+        background: #c6b9ca;
+        border-radius: 4px;
+        padding: 8px 12px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
+  .nextBtn, .prevBtn{
+    position: absolute;
+    border: none;
+    font-size: 1.2rem;
+    color:white;
+    padding: 10px 20px;
+    background: #928A97;
+    transition: all .3s ease-in;
+
+  }
+
+  .nextBtn{
+    left: 33.7%;
+    border-radius: 35px 0 0 35px;
+    &:hover{
+      cursor: pointer;
+      color: red;
+      padding-left: 35px;
+      left: calc(33.7% - 15px);
+    }
+
+  }
+  .prevBtn{
+    border-radius:0 35px   35px 0;
+    left: 13.3%;
+    &:hover{
+      cursor: pointer;
+      color: red;
+      padding-right: 35px;
+    }
+  }
+  .right{
+    h1{
+      color: red;
+    }
+  }
   .bg{
     position: absolute;
     left: 5%;
