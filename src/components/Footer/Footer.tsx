@@ -1,12 +1,13 @@
 import React from 'react';
 import footerBg from '../../assets/img/footerBg.png'
 import styles from './footer.module.scss'
+import SocialLinks from "../SocialLinks/SocialLinks";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
             <img src={footerBg} alt=""/>
             <h3>Drynkin Sergey</h3>
-            <p>social blocks</p>
+           <SocialLinks/>
             <p>All Rights Reserved 2022 Drynkin Sergey</p>
         </footer>
     );

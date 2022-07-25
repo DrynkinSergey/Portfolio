@@ -3,14 +3,19 @@
   letter-spacing: .3rem;
   position: relative;
   height: 100vh;
-
+  &BG{
+    position: fixed;
+  }
   img{
     position: absolute;
     z-index: -1;
     left: 0;
     top: 0;
-    height: 180vh;
+    width: 1800px;
+    height: 1600px;
+
   }
+
   ul {
     display: flex;
     .active {

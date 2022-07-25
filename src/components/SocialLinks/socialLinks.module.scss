@@ -1,0 +1,14 @@
+.svgLogo{
+  list-style: none;
+  display: flex;
+
+  li{
+    padding: 10px;
+    margin: 0 auto;
+    &:hover *{
+      transform: translateY(-5px);
+    }
+  }
+
+
+  }
