@@ -80,6 +80,7 @@
     }
   }
   .right{
+    width: 80%;
     h1{
       color: red;
     }
@@ -90,9 +91,14 @@
     z-index: -2;
   }
   .worksImg {
-    width: 50%;
+    width: 360px;
+    height: 490px;
     top: 0;
     left: 15%;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
   }
   .itemBg{
     position: absolute;
