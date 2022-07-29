@@ -21,9 +21,9 @@ const Works = () => {
         {
             id: 1,
             projectName: 'Pizza',
-            aboutProject: 'Project 1',
+            aboutProject: 'In that projects used actually technology and best practice, i used Typescript with couple of React. That project have React Routes and Redux toolkit async Thunks. ' ,
             url: pizza,
-            technology: ['ReactJs', 'SCSS', 'Typescript', 'Html', 'Redux Toolkit'],
+            technology: ['ReactJs', 'SCSS', 'Typescript', 'Html', 'Redux Toolkit', 'MockAPI'],
             ghPages: 'https://drynkinsergey.github.io/Pizza/',
             repo: 'https://github.com/DrynkinSergey/Pizza'
         },
