@@ -7,6 +7,32 @@
   align-items: center;
   grid-template-areas:
     "left skillsImg ";
+  .svgLogo{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 20px 0;
+    max-width: 70%;
+    font-weight: bold;
+    text-align: center;
+    li{
+      box-shadow: 2px 4px 2px 2px #787878;
+      background-image: linear-gradient(to left bottom, #c2cbf4, #b9c6f6, #aec0f8, #a3bbfa, #97b6fc, #88acfd, #78a2fe, #6798ff, #5485ff, #4870ff, #4659fe, #4d3df8);      width: 100px;
+      height: 120px;
+      display: grid;
+      margin: 10px;
+      padding: 5px;
+      border-radius: 10px;
+      align-items: center;
+      justify-items: center;
+
+    }
+    .svgLink{
+      height: 60px;
+      width: 60px;
+    }
+  }
 
   .skillsImg {
     width: 50%;

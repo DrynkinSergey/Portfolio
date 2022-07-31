@@ -5,6 +5,7 @@
   grid-auto-flow: row;
   justify-items: center;
   align-items: center;
+
   grid-template-areas:
     "worksImg right";
   .worksInfo{
@@ -43,6 +44,8 @@
         padding: 8px 12px;
         margin-right: 10px;
         margin-bottom: 10px;
+        box-shadow: 2px 5px 7px 1px #787878;
+
       }
     }
   }
@@ -94,6 +97,8 @@
     width: 360px;
     height: 490px;
     top: 0;
+    border-radius: 10px;
+    box-shadow: -1px 5px 13px 8px #787878;
     left: 15%;
     overflow: hidden;
     img{

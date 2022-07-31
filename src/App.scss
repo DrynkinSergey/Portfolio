@@ -7,6 +7,20 @@ body{
   font-family: 'Edu QLD Beginner', cursive;
 
 }
+.btnBlack{
+  background: #000C24;
+  margin: 12px 0;
+  border-radius: 4px;
+  color:white;
+  padding: 10px 37px;
+  transition: all .2s ease-in;
+  &:hover{
+    cursor: pointer;
+    color:red;
+    box-shadow: 0 5px 6px 0 #787878;
+    transform: translateY(-5px);
+  }
+}
 ul{
   padding: 0;
 }

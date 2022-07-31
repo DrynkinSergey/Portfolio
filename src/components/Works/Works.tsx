@@ -91,18 +91,18 @@ const Works = () => {
                     <h3>Gh-pages :  <a target='_blank' href={project.ghPages}>{project.ghPages}</a></h3>
                     <div className={styles.worksBtns}>
                         {
-                            project.technology.map<any>(item =><button className={styles.technologyBtn}>{item}</button>)
+                            project.technology.map((item,index) =><button key={index} className={styles.technologyBtn}>{item}</button>)
                         }
 
                     </div>
                     <div className={styles.totalProjects}>
                         {
-                            projects.map<any>((item, index) => {
+                            projects.map((item, index) => {
                                 return (
-                                    project.id !== index + 1 ? <button onClick={() => changeProject(item.id)}
+                                    project.id !== index + 1 ? <button key={index} onClick={() => changeProject(item.id)}
                                                                        className={styles.totalProjects__item}/>
                                         :
-                                        <button onClick={() => changeProject(item.id)}
+                                        <button key={index}  onClick={() => changeProject(item.id)}
                                                 className={`${styles.totalProjects__item} ${styles.totalProjects__item__active}`}/>
                                 )
                             })

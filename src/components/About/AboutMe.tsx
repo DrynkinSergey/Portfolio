@@ -20,7 +20,7 @@ const AboutMe = () => {
                 <p className={styles.sectionTitle}>Hi! I'm a Frontend developer. I want to work and develop as a specialist among like-minded people! Ready to study and work hard.
                </p>
                 <p> I'm love coding, have a nice sense of humor and positive person!</p>
-                <button onClick={saveFile} className={styles.sectionBtn}>Download CV</button>
+                <button onClick={saveFile} className='btnBlack'>Download CV</button>
             </div>
         </section>
     );

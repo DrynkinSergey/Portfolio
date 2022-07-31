@@ -11,7 +11,7 @@ const ContactMe = () => {
                     <input type="text" placeholder='Name'/>
                     <input type="text" placeholder='Email'/>
                     <textarea  placeholder='Message'/>
-                    <button>Send message</button>
+                    <button className='btnBlack'>Send message</button>
                 </div>
             </form>
         </section>

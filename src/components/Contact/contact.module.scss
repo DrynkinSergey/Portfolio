@@ -18,6 +18,9 @@
     }
     .data{
       font-size: 1.2rem;
+      textarea{
+        resize: none;
+      }
 
       h2{
         color: red;
@@ -36,19 +39,7 @@
           border-color: #61dafb;
         }
       }
-      button{
-        background: #000C24;
-        border-radius: 4px;
-        color:white;
-        padding: 10px 37px;
-        transition: all .2s ease-in;
-        &:hover{
-          cursor: pointer;
-          color:red;
-          box-shadow: 0 5px 6px 0 #787878;
-          transform: translateY(-5px);
-        }
-      }
+
     }
   }
 }
