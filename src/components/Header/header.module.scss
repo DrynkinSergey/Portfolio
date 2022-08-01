@@ -15,25 +15,46 @@
     height: 1600px;
 
   }
+  nav{
+    .active {
+      color:#ffff4f;
+      font-weight: bold;
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #ffff4f;
+      }
+    }
+    ul{
+      background-color: #00041f;
+      width: 100%;
+      z-index: 9999;
+      display: flex;
+      justify-content: flex-end;
 
+      position: fixed;
+      li{
+        margin: 0;
+        font-size: 18px;
+        padding: 12px 30px;
+        &:hover{
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+  }
   ul {
     display: flex;
-    .active {
-      color:red;
-      font-weight: bold;
-      background-image: url("Active.png");
-      background-position: 11px 0;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    li {
 
+    li {
       padding:24px 30px;
       list-style: none;
       margin-right: 65px;
       margin: 20px 0;
       color: #928A97;
-
     }
   }
   .aboutMe{

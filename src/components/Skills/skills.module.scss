@@ -18,7 +18,9 @@
     text-align: center;
     li{
       box-shadow: 2px 4px 2px 2px #787878;
-      background-image: linear-gradient(to left bottom, #c2cbf4, #b9c6f6, #aec0f8, #a3bbfa, #97b6fc, #88acfd, #78a2fe, #6798ff, #5485ff, #4870ff, #4659fe, #4d3df8);      width: 100px;
+      background-image: linear-gradient(to left bottom, #040f3d, #0a1e5d, #102d7f, #163da3, #184ec8, #1b4dca, #1f4ccb, #224bcd, #2137aa, #1b2589, #11146a, #06024c);
+      font-size: 20px;
+      width: 100px;
       height: 120px;
       display: grid;
       margin: 10px;
@@ -40,10 +42,7 @@
     right: 15%;
   }
 
-  .sectionName {
-    color: red;
 
-  }
 
   .sectionTitle {
     max-width: 600px;
@@ -54,6 +53,7 @@
   .bg{
     position: absolute;
     right: 0;
+    z-index: -2;
     top: -50%;
   }
 }

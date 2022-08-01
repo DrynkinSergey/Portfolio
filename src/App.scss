@@ -1,5 +1,5 @@
 body{
-  font-size: 20px;
+  font-size: 24px;
 }
 *{
   margin: 0;
@@ -7,6 +7,28 @@ body{
   font-family: 'Edu QLD Beginner', cursive;
 
 }
+
+.colorBox{
+    h1,h2{
+      color:#1d4dcb;
+    }
+button{
+  color:white;
+  font-size: 16px;
+  background-color: #1d4dcb;
+  &:hover{
+    box-shadow: 1px 3px 3px 0 #3869f8;
+
+
+  }
+}
+  background-image: linear-gradient(to right top, #02002a, #03052e, #030a32, #020e36, #01123a, #011238, #011335, #021333, #04102a, #040c20, #020817, #00030b);
+  padding: 20px;
+  color:white;
+  border-radius: 10px;
+  box-shadow: 5px 3px 6px 4px #373737;
+}
+
 .btnBlack{
   background: #000C24;
   margin: 12px 0;

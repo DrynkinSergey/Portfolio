@@ -10,12 +10,13 @@ const Skills = () => {
             <img className={styles.bg} src={bg} alt=""/>
             <div className={`container ${styles.content}`}>
             <div className="left">
-                <h1 className={styles.sectionName}>Skills</h1>
-                <p className={styles.sectionTitle}>I enjoy creating things that live on the internet, whether that be
-                    websites, applications, or anything in between.</p>
-                <div>
+               <div className='colorBox'>
+                   <h1 className={styles.sectionName}>Skills</h1>
+                   <p className={styles.sectionTitle}>I enjoy creating things that live on the internet, whether that be
+                       websites, applications, or anything in between.</p>
+               </div>
+
                 <SkillsList/>
-                </div>
             </div>
             <img className={styles.skillsImg} src={skillsImg} alt=""/>
         </div></section>

@@ -7,13 +7,13 @@
   align-items: center;
 
   grid-template-areas:
-    "worksImg right";
-  .worksInfo{
-    h2{
-      color: red;
-      margin-bottom: 10px;
-    }
+    "left right ";
+  .left{
+
     .totalProjects{
+      position: absolute;
+      bottom: 5%;
+      left: 11%;
       &__item{
         width: 100px;
         height: 7px;
@@ -31,7 +31,17 @@
         }
       }
     }
+
+  }
+  .worksInfo{
+    h3{
+      font-size: 24px;
+    }
+    h2{
+      margin-bottom: 10px;
+    }
     .worksBtns{
+
       padding: 10px 0;
       display: flex;
       flex-wrap: wrap;
@@ -39,12 +49,11 @@
         border: none;
         color: white;
         font-size: 1.1rem;
-        background: #c6b9ca;
+        background: #1d4dcb;
         border-radius: 4px;
         padding: 8px 12px;
         margin-right: 10px;
         margin-bottom: 10px;
-        box-shadow: 2px 5px 7px 1px #787878;
 
       }
     }

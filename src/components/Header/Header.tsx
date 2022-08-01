@@ -8,14 +8,18 @@ const Header: React.FC = () => {
     return (
         <header className={styles.header}>
             <img className={styles.headerBG} src={bg} alt="background"/>
-            <div className='container'>
+            <nav>
                 <ul>
                     <li className={styles.active}>Home</li>
                     <li>About</li>
                     <li>Skills</li>
                     <li>Works</li>
-                    <li>Contact</li>
+                    <li >Contact</li>
                 </ul>
+            </nav>
+
+            <div className='container'>
+
                 <div className={styles.aboutMe}>
                     <h1>Drynkin Sergey</h1>
                     <h2>Junior <span>Front-end Developer</span></h2>

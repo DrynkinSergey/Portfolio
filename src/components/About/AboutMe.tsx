@@ -15,7 +15,7 @@ const AboutMe = () => {
     return (
         <section className={`container   ${styles.aboutMe__content}`}>
             <img className={styles.imgMe} src={me} alt=""/>
-            <div className={styles.right}>
+            <div className='colorBox'>
                 <h1 className={styles.sectionName}>About Me</h1>
                 <p className={styles.sectionTitle}>Hi! I'm a Frontend developer. I want to work and develop as a specialist among like-minded people! Ready to study and work hard.
                </p>
