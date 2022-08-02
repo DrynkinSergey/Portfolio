@@ -1,3 +1,4 @@
+import  '../animation.scss'
 import '../App.scss';
 import Header from "./Header/Header";
 import AboutMe from "./About/AboutMe";

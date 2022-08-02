@@ -1,8 +1,28 @@
+@import "../../animation";
 .header {
   color: white;
   letter-spacing: .3rem;
   position: relative;
   height: 100vh;
+
+
+ .scroll{
+   width: 45px;
+   height: 45px;
+   position: absolute;
+   z-index: 99;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   animation-name: scrollDown;
+   animation-iteration-count: infinite;
+   animation-duration: 2s;
+  *{
+    fill: #02b4ff;
+  }
+ }
+
+
 
 
   img{
@@ -18,6 +38,9 @@
     }
     @media (max-width: 768px) {
     left:-40%;
+    }
+    @media (max-width: 568px) {
+      left:-100%;
     }
 
   }
@@ -68,6 +91,8 @@
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    animation-duration: 2s;
+    animation-name: slideLeft;
     h2{
       @media (max-width: 768px) {
        font-size: 30px;

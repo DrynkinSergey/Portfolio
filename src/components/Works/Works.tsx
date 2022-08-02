@@ -29,7 +29,7 @@ const Works = () => {
             id: 2,
             projectName: 'MarvelDB',
             aboutProject: 'Project 2',
-            url: 'https://media.tproger.ru/uploads/2017/04/frontend-vs-backend.jpg\n',
+            url: 'https://miro.medium.com/max/1400/1*ZyYYEl1Ee0g4K9aQCqbMhw.png',
             technology: ['ReactJs', 'Css', 'JavaScript', 'Html', 'Redux'],
             ghPages: '',
             repo: 'https://github.com/DrynkinSergey/MarvelDB'
@@ -39,7 +39,7 @@ const Works = () => {
             id: 3,
             projectName: 'Project 3',
             aboutProject: 'Project 1',
-            url: 'https://media.tproger.ru/uploads/2017/04/frontend-vs-backend.jpg\n',
+            url: 'https://miro.medium.com/max/1400/1*ZyYYEl1Ee0g4K9aQCqbMhw.png',
             technology: ['ReactJs', 'Css', 'JavaScript', 'Redux'],
             ghPages: 'sdf',
             repo: 'asdffs'
@@ -49,7 +49,7 @@ const Works = () => {
             id: 4,
             projectName: 'Project 4',
             aboutProject: 'Project 1',
-            url: 'https://media.tproger.ru/uploads/2017/04/frontend-vs-backend.jpg\n',
+            url: 'https://miro.medium.com/max/1400/1*ZyYYEl1Ee0g4K9aQCqbMhw.png',
             technology: ['ReactJs', 'Css', 'JavaScript', 'Html'],
             ghPages: 'sdf',
             repo: 'dsafasdfas'
@@ -58,9 +58,7 @@ const Works = () => {
     ];
 
     const [project, setProject] = React.useState(projects[0]);
-    const changePicture = (index: number) => {
-        setProject(projects[(project.id - 1) + index])
-    }
+
     const changeProject = (index: number) => {
         setProject(projects[index - 1])
         console.log(classNames);
@@ -69,10 +67,6 @@ const Works = () => {
     return (
         <section className={`container  ${styles.content}`}>
             <img src={worksBg} alt="bg" className={styles.bg}/>
-           {/* {project.id !== 1 &&
-            <button onClick={() => changePicture(-1)} className={styles.prevBtn}> &#8592;     </button>}
-            {project.id !== projects.length &&
-            <button onClick={() => changePicture(1)} className={styles.nextBtn}> &#8594; </button>}*/}
             <div className={styles.left}>
                 <div className={styles.worksImg}>
                     <img src={project.url} alt="my works"/>
@@ -99,8 +93,8 @@ const Works = () => {
                 <div className={styles.worksInfo}>
                     <h2>{project.projectName}</h2>
                     <h3>{project.aboutProject}</h3>
-                    <h3>Link : <a target='_blank' href={project.repo}>{project.repo}</a></h3>
-                    <h3>Gh-pages : <a target='_blank' href={project.ghPages}>{project.ghPages}</a></h3>
+                    <h3>Link : <a target='_blank' href={project.repo}>Repository</a></h3>
+                    <h3>Gh-pages : <a target='_blank' href={project.ghPages}>Demo</a></h3>
                     <div className={styles.worksBtns}>
                         {
                             project.technology.map((item, index) => <button key={index}

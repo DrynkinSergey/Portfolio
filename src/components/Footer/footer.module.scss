@@ -7,11 +7,17 @@
   align-items: center;
   flex-direction: column;
   padding: 10px 0;
+  @media (max-width: 1050px) {
+    img{display: none;}
+    font-size: 15px;
+
+  }
 img{
   position: absolute;
   right: 10%;
   top: 0;
   height: 100%;
+
 }
   
 }
