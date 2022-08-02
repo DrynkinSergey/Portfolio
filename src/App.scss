@@ -7,12 +7,18 @@ body{
   font-family: 'Edu QLD Beginner', cursive;
 
 }
-
+main{
+  overflow: hidden;
+}
+.container{
+  padding: 0 35px;
+}
 .colorBox{
     h1,h2{
       color:#1d4dcb;
     }
 button{
+  border:none;
   color:white;
   font-size: 16px;
   background-color: #1d4dcb;
@@ -26,10 +32,12 @@ button{
   padding: 20px;
   color:white;
   border-radius: 10px;
-  box-shadow: 5px 3px 6px 4px #373737;
+  box-shadow: 7px 5px 11px 2px #032763;
+
 }
 
 .btnBlack{
+  font-size: 20px;
   background: #000C24;
   margin: 12px 0;
   border-radius: 4px;

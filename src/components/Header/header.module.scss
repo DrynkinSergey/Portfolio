@@ -3,9 +3,8 @@
   letter-spacing: .3rem;
   position: relative;
   height: 100vh;
-  &BG{
-    position: fixed;
-  }
+
+
   img{
     position: absolute;
     z-index: -1;
@@ -13,6 +12,13 @@
     top: 0;
     width: 1800px;
     height: 1600px;
+
+    @media (max-width: 1300px) {
+      width: initial;
+    }
+    @media (max-width: 768px) {
+    left:-40%;
+    }
 
   }
   nav{
@@ -61,7 +67,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 980px;
+    height: 100vh;
+    h2{
+      @media (max-width: 768px) {
+       font-size: 30px;
+      }
+    }
   h2 span{
     color:yellow;
   }

@@ -1,7 +1,6 @@
 
   .aboutMe__content {
 
-
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-auto-flow: row;
@@ -9,12 +8,28 @@
     align-items: center;
     grid-template-areas:
     "imgMe right ";
+    @media (max-width: 620px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+
 
     .imgMe{
+
       width: 50%;
       box-shadow: 5px 3px 6px 4px #373737;
       border-radius: 10px;
 
+      @media (max-width: 1024px) {
+        width: 60%;
+      }
+      @media (max-width: 768px) {
+        width: 85%;
+      }
+      @media (max-width: 620px) {
+        margin: 50px 0;
+      }
 
     }
     .sectionBtn{

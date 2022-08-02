@@ -64,18 +64,15 @@ const Works = () => {
     const changeProject = (index: number) => {
         setProject(projects[index - 1])
         console.log(classNames);
-
-
     }
-
 
     return (
         <section className={`container  ${styles.content}`}>
             <img src={worksBg} alt="bg" className={styles.bg}/>
-            {project.id !== 1 &&
+           {/* {project.id !== 1 &&
             <button onClick={() => changePicture(-1)} className={styles.prevBtn}> &#8592;     </button>}
             {project.id !== projects.length &&
-            <button onClick={() => changePicture(1)} className={styles.nextBtn}> &#8594; </button>}
+            <button onClick={() => changePicture(1)} className={styles.nextBtn}> &#8594; </button>}*/}
             <div className={styles.left}>
                 <div className={styles.worksImg}>
                     <img src={project.url} alt="my works"/>
@@ -97,7 +94,7 @@ const Works = () => {
                 </div>
             </div>
             <img src={workItemBg} alt="itemBg" className={styles.itemBg}/>
-            <div className='colorBox'>
+            <div className={`colorBox  ${styles.right}`}>
                 <h1>Works</h1>
                 <div className={styles.worksInfo}>
                     <h2>{project.projectName}</h2>

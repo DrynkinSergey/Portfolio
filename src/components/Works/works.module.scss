@@ -1,19 +1,33 @@
 .content{
+  padding: 80px 35px;
   position: relative;
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-auto-flow: row;
   justify-items: center;
   align-items: center;
-
+  @media (max-width: 940px) {
+    display: block;
+  }
   grid-template-areas:
     "left right ";
   .left{
-
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
     .totalProjects{
       position: absolute;
-      bottom: 5%;
-      left: 11%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      @media (max-width: 940px) {
+        bottom: 1%;
+      }
       &__item{
         width: 100px;
         height: 7px;
@@ -92,7 +106,8 @@
     }
   }
   .right{
-    width: 80%;
+    width: 100%;
+    margin-top: 10px;
     h1{
       color: red;
     }
