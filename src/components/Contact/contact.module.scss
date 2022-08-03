@@ -1,5 +1,5 @@
 .contact{
-  background-image: url("../../assets/img/getInTouch.png");
+  background-image: url("../../assets/img/getInTouch.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,6 +12,7 @@
     justify-content: center;
     justify-items: center;
     @media (max-width: 650px) {
+      margin: 0 15px;
     }
     h1{
       font-weight: 600;

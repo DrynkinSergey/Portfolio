@@ -1,11 +1,78 @@
 body{
   font-size: 24px;
 }
+
+.op0{
+  opacity: 0;
+}
+.slideFromBottom{
+  animation-duration: 1s;
+  animation-name: fromBottom;
+}
+.slideFromLeft{
+  animation-duration: 2s;
+  animation-name: slideLeft;
+}
+.fromLeftSlide{
+  animation-duration: .5s;
+  animation-name: fromLeft;
+}
+
 *{
   margin: 0;
   box-sizing: border-box;
   font-family: 'Edu QLD Beginner', cursive;
+}
+section{
+  padding: 200px 0!important;
 
+  @media (max-width: 768px) {
+    padding: 80px 0!important;
+
+  }
+}
+
+.menu-icon {
+  visibility: hidden;
+  margin: 20px 25px;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  position: relative;
+  @media (max-width: 1024px){
+    visibility: initial;
+  }
+}
+.menu-icon span {
+  background-color: #ffffff;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.menu-icon span:first-child {
+  top: 0;
+}
+.menu-icon span:nth-child(2) {
+  top: 6px;
+}
+.menu-icon span:last-child {
+  top: 12px;
+}
+.burgerOpen.menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+.burgerOpen.menu-icon span:first-child,
+.burgerOpen.menu-icon span:last-child {
+  top: 6px;
+  background-color: red;
+}
+.burgerOpen.menu-icon span:first-child {
+  transform: rotate(45deg);
+}
+.burgerOpen.menu-icon span:last-child {
+  transform: rotate(-45deg);
 }
 main{
   overflow: hidden;
@@ -14,9 +81,14 @@ main{
   padding: 0 15px;
 }
 .colorBox{
-    h1,h2{
+  margin: 0 15px;
+
+  h1,h2{
       color:#1d4dcb;
     }
+  @media (max-width: 768px){
+    margin:0 15px;
+  }
 button{
   border:none;
   color:white;

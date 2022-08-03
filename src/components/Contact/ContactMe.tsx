@@ -8,7 +8,7 @@ const ContactMe = () => {
 
 
     return (
-        <section className={styles.contact}>
+        <section id='contact' className={styles.contact}>
             <form onSubmit={submitHandler} className={`container ${styles.contact__content}`}>
                 <h1><p>Drop me a line.</p>
                     <p>I would like to hear from you.</p></h1>

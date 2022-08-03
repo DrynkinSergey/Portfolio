@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from './aboutMe.module.scss'
-import me from './me1.png';
+import me from './me.webp';
 import cv from '../../assets/Junior_frontend__Drynkin_Sergey.pdf'
 import { saveAs } from "file-saver";
 
-const AboutMe = () => {
+interface AboutProps {
+    scroll:number
+}
+
+const AboutMe:React.FC<AboutProps> = ({scroll}) => {
     const saveFile = () => {
         saveAs(
             // @ts-ignore
@@ -13,9 +17,9 @@ const AboutMe = () => {
         );
     };
     return (
-        <section className={`container   ${styles.aboutMe__content}`}>
-            <img className={styles.imgMe} src={me} alt=""/>
-            <div className='colorBox'>
+        <section  id='about' className={`container   ${styles.aboutMe__content}`}>
+            <img className={scroll >550 ?`${styles.imgMe} fromLeftSlide`:`${styles.imgMe} op0`} src={me} alt=""/>
+            <div className={scroll >750 ?`colorBox slideFromBottom`:`colorBox op0`} >
                 <h1 className={styles.sectionName}>About Me</h1>
                 <p className={styles.sectionTitle}>Hi! I'm a Frontend developer. I want to work and develop as a specialist among like-minded people! Ready to study and work hard.
                </p>

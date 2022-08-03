@@ -5,15 +5,23 @@ import AboutMe from "./About/AboutMe";
 import Skills from "./Skills/Skills";
 import Footer from "./Footer/Footer";
 import Works from "./Works/Works";
-import {FC} from "react";
+import {FC, useEffect, useState} from "react";
 import ContactMe from "./Contact/ContactMe";
-
+//2.5mb
 const App: FC = () => {
+    const [scroll, setScroll] = useState(0);
+
+    useEffect(()=>{
+        window.addEventListener('scroll', () => {
+                setScroll(window.pageYOffset);
+            }
+        )
+    },[])
     return (
         <main className="App">
-            <Header/>
-            <AboutMe/>
-            <Skills/>
+            <Header scroll={scroll}/>
+            <AboutMe scroll={scroll}/>
+            <Skills scroll={scroll}/>
             <Works/>
             <ContactMe/>
             <Footer/>

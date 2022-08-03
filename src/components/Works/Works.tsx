@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from "./works.module.scss"
-import pizza from "../../assets/img/pizza.jpg";
-import worksBg from "../../assets/img/WorksBg.png";
-import workItemBg from "../../assets/img/workItemBg.png";
+import pizza from "../../assets/img/pizza.webp";
+import worksBg from "../../assets/img/WorksBg.webp";
+import workItemBg from "../../assets/img/workItemBg.webp";
 
 const Works = () => {
     type Projects = {
@@ -19,7 +19,7 @@ const Works = () => {
         {
             id: 1,
             projectName: 'Pizza',
-            aboutProject: 'In that projects used actually technology and best practice, i used Typescript with couple of React. That project have React Routes and Redux toolkit async Thunks. ',
+            aboutProject: 'In that projects i used actually technology and best practice, i used Typescript with couple of React. That project have React Routes and Redux toolkit async Thunks. ',
             url: pizza,
             technology: ['ReactJs', 'SCSS', 'Typescript', 'Html', 'Redux Toolkit', 'MockAPI'],
             ghPages: 'https://drynkinsergey.github.io/Pizza/',
@@ -28,44 +28,24 @@ const Works = () => {
         {
             id: 2,
             projectName: 'MarvelDB',
-            aboutProject: 'Project 2',
-            url: 'https://miro.medium.com/max/1400/1*ZyYYEl1Ee0g4K9aQCqbMhw.png',
+            aboutProject: 'In that projects i used API Marvel, AsyncThunk, ReactRouting. I used preloader, errorBoundary, skeleton and custom hooks, services. Used best practice!',
+            url: 'https://novy.tv/wp-content/uploads/sites/96/2022/06/184777_1-e1654706799476.jpg',
             technology: ['ReactJs', 'Css', 'JavaScript', 'Html', 'Redux'],
             ghPages: '',
             repo: 'https://github.com/DrynkinSergey/MarvelDB'
 
         },
-        {
-            id: 3,
-            projectName: 'Project 3',
-            aboutProject: 'Project 1',
-            url: 'https://miro.medium.com/max/1400/1*ZyYYEl1Ee0g4K9aQCqbMhw.png',
-            technology: ['ReactJs', 'Css', 'JavaScript', 'Redux'],
-            ghPages: 'sdf',
-            repo: 'asdffs'
 
-        },
-        {
-            id: 4,
-            projectName: 'Project 4',
-            aboutProject: 'Project 1',
-            url: 'https://miro.medium.com/max/1400/1*ZyYYEl1Ee0g4K9aQCqbMhw.png',
-            technology: ['ReactJs', 'Css', 'JavaScript', 'Html'],
-            ghPages: 'sdf',
-            repo: 'dsafasdfas'
-
-        },
     ];
 
     const [project, setProject] = React.useState(projects[0]);
 
     const changeProject = (index: number) => {
         setProject(projects[index - 1])
-        console.log(classNames);
     }
 
     return (
-        <section className={`container  ${styles.content}`}>
+        <section id='works' className={`container  ${styles.content}`}>
             <img src={worksBg} alt="bg" className={styles.bg}/>
             <div className={styles.left}>
                 <div className={styles.worksImg}>
@@ -94,7 +74,7 @@ const Works = () => {
                     <h2>{project.projectName}</h2>
                     <h3>{project.aboutProject}</h3>
                     <h3>Link : <a target='_blank' href={project.repo}>Repository</a></h3>
-                    <h3>Gh-pages : <a target='_blank' href={project.ghPages}>Demo</a></h3>
+                    {project.ghPages&& <h3>Gh-pages : <a target='_blank' href={project.ghPages}>Demo</a></h3>}
                     <div className={styles.worksBtns}>
                         {
                             project.technology.map((item, index) => <button key={index}
