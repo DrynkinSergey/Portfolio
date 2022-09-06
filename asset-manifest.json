@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a0107e85.css",
-    "main.js": "/Portfolio/static/js/main.eb45be78.js",
+    "main.css": "/Portfolio/static/css/main.25ecffe0.css",
+    "main.js": "/Portfolio/static/js/main.c27c9c7c.js",
     "static/media/HeaderImgTop.webp": "/Portfolio/static/media/HeaderImgTop.ecaf1c77a5320b24f175.webp",
     "static/media/Junior_frontend__Drynkin_Sergey.pdf": "/Portfolio/static/media/Junior_frontend__Drynkin_Sergey.253f5d72582b209fe02a.pdf",
     "static/media/getInTouch.webp": "/Portfolio/static/media/getInTouch.2b61afb59d1e76ac146a.webp",
@@ -24,11 +24,11 @@
     "static/media/javascript.svg": "/Portfolio/static/media/javascript.6e5aebc171a0e070c3849b3dac26ed37.svg",
     "static/media/ts.svg": "/Portfolio/static/media/ts.f60a985721fd81855111f5468100ebad.svg",
     "static/media/tailwind.svg": "/Portfolio/static/media/tailwind.be6dd66a9d8aa92e4d3a09f0999396c7.svg",
-    "main.a0107e85.css.map": "/Portfolio/static/css/main.a0107e85.css.map",
-    "main.eb45be78.js.map": "/Portfolio/static/js/main.eb45be78.js.map"
+    "main.25ecffe0.css.map": "/Portfolio/static/css/main.25ecffe0.css.map",
+    "main.c27c9c7c.js.map": "/Portfolio/static/js/main.c27c9c7c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0107e85.css",
-    "static/js/main.eb45be78.js"
+    "static/css/main.25ecffe0.css",
+    "static/js/main.c27c9c7c.js"
   ]
 }
