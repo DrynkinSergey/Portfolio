@@ -27,6 +27,16 @@ const Works = () => {
         },
         {
             id: 2,
+            projectName: 'YouTube Clone',
+            aboutProject: 'In that projects i used ReactJS, TailwindCSS.',
+            url: 'https://www.muycomputer.com/wp-content/uploads/2021/10/youtube-1.jpg',
+            technology: ['ReactJs', 'TailwindCSS', 'JavaScript', 'Html'],
+            ghPages: 'https://drynkinsergey.github.io/YoutubeClone/',
+            repo: 'https://github.com/DrynkinSergey/YoutubeClone'
+
+        },
+        {
+            id: 3,
             projectName: 'MarvelDB',
             aboutProject: 'In that projects i used API Marvel, AsyncThunk, ReactRouting. I used preloader, errorBoundary, skeleton and custom hooks, services. Used best practice!',
             url: 'https://novy.tv/wp-content/uploads/sites/96/2022/06/184777_1-e1654706799476.jpg',

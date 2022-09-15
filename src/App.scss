@@ -1,7 +1,20 @@
 body{
   font-size: 24px;
 }
+::-webkit-scrollbar {
+  width: 10px;
 
+}
+
+::-webkit-scrollbar-track {
+   background: #75716e;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00041f;
+  height: 40px;
+}
 .op0{
   opacity: 0;
 }
@@ -96,8 +109,6 @@ button{
   background-color: #1d4dcb;
   &:hover{
     box-shadow: 1px 3px 3px 0 #3869f8;
-
-
   }
 }
   background-image: linear-gradient(to right top, #02002a, #03052e, #030a32, #020e36, #01123a, #011238, #011335, #021333, #04102a, #040c20, #020817, #00030b);
