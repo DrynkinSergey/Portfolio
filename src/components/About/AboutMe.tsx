@@ -26,40 +26,24 @@ const AboutMe:React.FC<AboutProps> = ({scroll}) => {
             gsap.timeline()
                 .from('#me',{
                     scrollTrigger:{
-                        markers:true,
-                        trigger:aboutMeRef.current,
-                        start:'top center',
-                        end:'+=400',
-                        scrub:2,
 
+                        trigger:aboutMeRef.current,
+                        start:'-15% center',
+                        scrub:3,
+                        end:'+=300'
                     },
-                    y:300,
-                    opacity:0
+                    opacity:0,
+                    yPercent:-50
                 })
+
                 .from('.colorBox',{
                     scrollTrigger:{
-                        markers:true,
                         trigger:aboutMeRef.current,
-                        start:'top 50%',
-                        end:'+=200',
-                        scrub:4,
+                        start:'top center',
+                        scrub:3,
                     },
-                    x:900,
-                    opacity:0,
+                    yPercent:200,
                 })
-                .from('#me',{
-                    scrollTrigger:{
-                        markers:true,
-                        trigger:aboutMeRef.current,
-                        start:'top top',
-                        end:'+=400',
-                        scrub:2,
-
-                    },
-                })
-
-
-
 
         }, aboutMeRef);
         return () => ctx.revert();

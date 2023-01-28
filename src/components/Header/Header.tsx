@@ -7,6 +7,7 @@ import '../../App.scss'
 import SocialLinks from "../SocialLinks/SocialLinks";
 import {ReactComponent as Scroll} from "../../assets/svg/scroll.svg";
 import Navigation from "../Navigation/Navigation";
+
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -20,7 +21,8 @@ const Header: React.FC<HeaderProps> = ({scroll}) => {
     const navRef = useRef(null)
 
     const ul = <ul ref={navRef}>
-        <li id='nav' onClick={() => scrollToSection('home')} className={scroll <= 599 ? `${styles.active}` : ''}>Home</li>
+        <li id='nav' onClick={() => scrollToSection('home')} className={scroll <= 599 ? `${styles.active}` : ''}>Home
+        </li>
         <li id='nav' onClick={() => scrollToSection('about')}
             className={(scroll >= 600 && scroll <= 1399) ? `${styles.active}` : ''}>About
         </li>
@@ -30,7 +32,9 @@ const Header: React.FC<HeaderProps> = ({scroll}) => {
         <li id='nav' onClick={() => scrollToSection('works')}
             className={(scroll >= 2200 && scroll <= 3099) ? `${styles.active}` : ''}>Works
         </li>
-        <li id='nav' onClick={() => scrollToSection('contact')} className={scroll >= 3100 ? `${styles.active}` : ''}>Contact</li>
+        <li id='nav' onClick={() => scrollToSection('contact')}
+            className={scroll >= 3100 ? `${styles.active}` : ''}>Contact
+        </li>
     </ul>;
 
     function scrollToSection(id: string) {
@@ -52,9 +56,9 @@ const Header: React.FC<HeaderProps> = ({scroll}) => {
                 }, {
                     y: 0,
                     opacity: 1,
-                    delay:1.5,
+                    delay: 1.5,
                     duration: 1,
-                    stagger:.3
+                    stagger: .3
                 })
         }, navRef);
         return () => ctx.revert();
@@ -63,65 +67,64 @@ const Header: React.FC<HeaderProps> = ({scroll}) => {
         let ctx = gsap.context(() => {
             gsap.timeline()
                 .fromTo('.name', {
-                x: -400,
-                opacity: 0,
-            }, {
-                x: 0,
-                opacity: 1,
-                duration: 1
-            })
+                    x: -400,
+                    opacity: 0,
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1
+                })
                 .fromTo('.subtitle', {
-                    xPercent:200,
+                    xPercent: 200,
                     opacity: 0
                 }, {
-                    xPercent:0,
+                    xPercent: 0,
                     opacity: 1,
                     duration: .7
                 })
                 .from('.svgLogo', {
-                    scale:0,
-                    opacity: 0
+                    scale: 0,
                 })
 
             //scroll
-                gsap.timeline()
-                    .to('.name',{
-                    scrollTrigger:{
-                        trigger:headerContentRef.current,
-                        start:'top top',
-                        scrub:3,
+            gsap.timeline()
+                .to('.name', {
+                    scrollTrigger: {
+                        trigger: headerContentRef.current,
+                        start: 'top top',
+                        scrub: 2,
                     },
-                    ease:'none',
-                    xPercent:-200,
-                        scale:0,
+                    ease: 'none',
+                    xPercent: -100,
+                    scale: 0,
                 })
-                    .fromTo('.svgLogo',{
-                        scrollTrigger:{
-                            trigger:headerContentRef.current,
-                            start:'top top',
-                            scrub:3,
-                        },
-                            y:0,
-                        opacity:1
-                        }, {
-                            scrollTrigger:{
-                                trigger:headerContentRef.current,
-                                start:'20% top',
-                                end: '+=300',
-                                scrub:3,
-                            },
-                            y:-400,
-                            opacity:0
-                        })
-                    .to('.subtitle',{
-                        scrollTrigger:{
-                            trigger:headerContentRef.current,
-                            start:'top top',
-                            end:'+=300',
-                            scrub:3,
-                        },
-                        x:-800
-                    })
+                .fromTo('.svgLogo', {
+                    scrollTrigger: {
+                        trigger: headerContentRef.current,
+                        start: 'top top',
+                        scrub: true,
+                    },
+                    y: 0,
+                    opacity: 1
+                }, {
+                    scrollTrigger: {
+                        trigger: headerContentRef.current,
+                        start: '20% top',
+                        end: '+=300',
+                        scrub: 3,
+                    },
+                    y: -400,
+                    opacity: 0
+                })
+                .to('.subtitle', {
+                    scrollTrigger: {
+                        trigger: headerContentRef.current,
+                        start: 'top top',
+                        end: '+=300',
+                        scrub: 3,
+                    },
+                    x: -800
+                })
 
 
         }, headerContentRef);
@@ -129,14 +132,14 @@ const Header: React.FC<HeaderProps> = ({scroll}) => {
     }, []);
 
     return (
-        <header ref={headerContentRef}  id='home' className={styles.header}>
+        <header ref={headerContentRef} id='home' className={styles.header}>
             <div className={!toggleBurger ? `${styles.burgerMenu}` : `${styles.burgerMenu} ${styles.show}`}>
                 {ul}
             </div>
             <img className={styles.headerBG} src={bg} alt="background"/>
             <Navigation ul={ul} setToggleBurger={setToggleBurger} toggleBurger={toggleBurger}/>
             <div className='container'>
-                <div  className={scroll < 600 ? `${styles.aboutMe} ` : `${styles.aboutMe}`}>
+                <div className={scroll < 600 ? `${styles.aboutMe} ` : `${styles.aboutMe}`}>
                     <h1 className='name'>Drynkin Sergey</h1>
                     <h2 className='subtitle'><span>Front-end Developer</span></h2>
                     <div className='svgLogo'>

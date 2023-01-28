@@ -8,7 +8,7 @@ const Footer = () => {
             <img src={footerBg} alt=""/>
             <h3>Drynkin Sergey</h3>
            <SocialLinks/>
-            <p>All Rights Reserved 2022 Drynkin Sergey</p>
+            <p>All Rights Reserved 2023 Drynkin Sergey</p>
         </footer>
     );
 };
