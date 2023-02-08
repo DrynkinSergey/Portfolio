@@ -1,77 +1,37 @@
-
-.content {
-
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-auto-flow: row;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas:
-    "left skillsImg ";
-  @media (max-width: 1024px) {
-
-    grid-template-columns: 1fr;
-
-  }
-
-
-
-  .svgLogo{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 20px 0;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    @media (max-width: 1024px) {
-      }
-
-
-    li{
-      box-shadow: 2px 4px 2px 2px #787878;
-      background-image: linear-gradient(to left bottom, #040f3d, #0a1e5d, #102d7f, #163da3, #184ec8, #1b4dca, #1f4ccb, #224bcd, #2137aa, #1b2589, #11146a, #06024c);
-      font-size: 20px;
-      width: 100px;
-      height: 120px;
-      display: grid;
-      margin: 10px;
-      padding: 5px;
-      border-radius: 10px;
-      align-items: center;
-      justify-items: center;
-
-
-    }
-    .svgLink{
-      height: 60px;
-      width: 60px;
-      
-    }
-  }
-
-  .skillsImg {
-    width: 50%;
-    top: 0;
-    right: 15%;
-    @media (max-width: 1024px) {
-      display: none;
-    }
-  }
-
-
-
-  .sectionTitle {
-    max-width: 600px;
-  }
-}
-.skills{
+.skills {
   position: relative;
-  .bg{
+  padding-bottom: 0 !important;
+
+  .skillsTitle {
+    padding: 30px 40px;
+    margin-top: 50px;
+  }
+
+  .usingNowSkills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+
+
+
+    .skill {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        display: grid;
+        justify-items: center;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .bg {
     position: absolute;
     right: 0;
     z-index: -2;
-    top: -50%;
+    top: -30%;
   }
 }

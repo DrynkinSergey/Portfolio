@@ -1,46 +1,33 @@
-body{
-  font-size: 24px;
-}
 ::-webkit-scrollbar {
   width: 10px;
 
 }
 
 ::-webkit-scrollbar-track {
-   background: #75716e;
-
+  background: #75716e;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #00041f;
   height: 40px;
 }
-.op0{
-  opacity: 0;
-}
-.slideFromBottom{
-  animation-duration: 1s;
-  animation-name: fromBottom;
-}
-.slideFromLeft{
-  animation-duration: 2s;
-  animation-name: slideLeft;
-}
-.fromLeftSlide{
-  animation-duration: .5s;
-  animation-name: fromLeft;
-}
 
-*{
+* {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Edu QLD Beginner', cursive;
 }
-section{
-  padding: 200px 0!important;
+
+ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding: 200px 0 !important;
 
   @media (max-width: 768px) {
-    padding: 80px 0!important;
+    padding: 80px 0 !important;
 
   }
 }
@@ -52,10 +39,12 @@ section{
   height: 14px;
   cursor: pointer;
   position: relative;
-  @media (max-width: 1024px){
+
+  @media (max-width: 1024px) {
     visibility: initial;
   }
 }
+
 .menu-icon span {
   background-color: #ffffff;
   height: 2px;
@@ -64,53 +53,68 @@ section{
   left: 0;
   transition: all 0.3s ease;
 }
+
 .menu-icon span:first-child {
   top: 0;
 }
+
 .menu-icon span:nth-child(2) {
   top: 6px;
 }
+
 .menu-icon span:last-child {
   top: 12px;
 }
+
 .burgerOpen.menu-icon span:nth-child(2) {
   opacity: 0;
 }
+
 .burgerOpen.menu-icon span:first-child,
 .burgerOpen.menu-icon span:last-child {
   top: 6px;
   background-color: red;
 }
+
 .burgerOpen.menu-icon span:first-child {
   transform: rotate(45deg);
 }
+
 .burgerOpen.menu-icon span:last-child {
   transform: rotate(-45deg);
 }
-main{
+
+main {
   overflow: hidden;
 }
-.container{
+
+.container {
   padding: 0 15px;
 }
-.colorBox{
+
+.colorBox {
   margin: 0 15px;
 
-  h1,h2{
-      color:#1d4dcb;
+  h1,
+  h2 {
+    color: #1d4dcb;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 15px;
+  }
+
+  button {
+    border: none;
+    color: white;
+    font-size: 16px;
+    background-color: #1d4dcb;
+
+    &:hover {
+      box-shadow: 1px 3px 3px 0 #3869f8;
     }
-  @media (max-width: 768px){
-    margin:0 15px;
   }
-button{
-  border:none;
-  color:white;
-  font-size: 16px;
-  background-color: #1d4dcb;
-  &:hover{
-    box-shadow: 1px 3px 3px 0 #3869f8;
-  }
-}
+
   background-image: linear-gradient(to right top, #02002a, #03052e, #030a32, #020e36, #01123a, #011238, #011335, #021333, #04102a, #040c20, #020817, #00030b);
   padding: 20px;
   color:white;
@@ -119,25 +123,28 @@ button{
 
 }
 
-.btnBlack{
+.btnBlack {
   font-size: 20px;
   background: #000C24;
   margin: 12px 0;
   border-radius: 4px;
-  color:white;
+  color: white;
   padding: 10px 37px;
   transition: all .2s ease-in;
-  &:hover{
+
+  &:hover {
     cursor: pointer;
-    color:red;
+    color: red;
     box-shadow: 0 5px 6px 0 #787878;
     transform: translateY(-5px);
   }
 }
-ul{
+
+ul {
   padding: 0;
 }
-.d-center{
+
+.d-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,13 +155,7 @@ ul{
   margin: 0 auto;
 }
 
-section{
+section {
   padding: 80px 15px;
 
 }
-
-
-
-
-
-
