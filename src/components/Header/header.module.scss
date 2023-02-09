@@ -1,9 +1,12 @@
 @import "../../animation";
+@import "../../scss/variables.scss";
+
 .header {
   .active {
-    color:#ffff4f;
+    color: #ffff4f;
     font-weight: bold;
-    &:after{
+
+    &:after {
       content: '';
       display: block;
       width: 100%;
@@ -11,74 +14,67 @@
       background-color: #ffff4f;
     }
   }
+
   color: white;
   letter-spacing: .3rem;
   position: relative;
   height: 100vh;
-.burgerMenu{
-  position: fixed;
-  top: 5%;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(59, 59, 59, 0.5);
-  display: none;
-  z-index: 99999;
-  ul{
-    display: flex;
-    flex-direction: column;
-    background-color: #00041f;
-    
-    height: 100%;
-    width: 250px;
-    animation-name: fromLeft;
-    animation-duration: .5s;
+
+  .burgerMenu {
+    position: fixed;
+    top: 5%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(59, 59, 59, 0.5);
+    display: none;
+    z-index: 99999;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      background-color: #00041f;
+
+      height: 100%;
+      width: 250px;
+      animation-name: fromLeft;
+      animation-duration: .5s;
+    }
   }
-}
-  .show{
+
+  .show {
     display: initial;
 
   }
 
- .scroll{
-   width: 45px;
-   height: 45px;
-   position: absolute;
-   z-index: 99;
-   left: 0;
-   right: 0;
-   margin: 0 auto;
-   animation-name: scrollDown;
-   animation-iteration-count: infinite;
-   animation-duration: 2s;
-  *{
-    fill: #02b4ff;
+  .scroll {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation-name: scrollDown;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+
+    * {
+      fill: #02b4ff;
+    }
   }
- }
 
 
 
 
-  img{
+  img {
     position: absolute;
     z-index: -1;
-    left: 0;
-    top: 0;
-    width: 1800px;
-    height: 1600px;
-
-    @media (max-width: 1300px) {
-      width: initial;
-    }
-    @media (max-width: 768px) {
-    left:-40%;
-    }
-    @media (max-width: 568px) {
-      left:-100%;
-    }
-
+    left: calc($indexSize*(-5));
+    max-width: 100vw;
   }
-  nav{
+
+  nav {
     width: 100%;
     position: fixed;
     z-index: 9999;
@@ -86,47 +82,50 @@
     background-color: #00041f;
     display: flex;
     justify-content: flex-end;
+
     @media (max-width:1024px) {
       justify-content: flex-start;
     }
 
-    ul{
-      li{
+    ul {
+      li {
         margin: 0;
-        font-size: 18px;
+        font-size: calc($indexSize*.5);
         padding: 12px 30px;
-        &:hover{
+
+        &:hover {
           cursor: pointer;
           color: white;
         }
       }
     }
   }
+
   ul {
     display: flex;
-    @media (max-width: 1024px){
+
+    @media (max-width: 1024px) {
       display: none;
     }
+
     li {
-      padding:24px 30px;
+      padding: 24px 30px;
       list-style: none;
       margin-right: 65px;
       margin: 20px 0;
       color: #928A97;
     }
   }
-  .aboutMe{
+
+  .aboutMe {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     height: 100vh;
-    h2{
-      @media (max-width: 768px) {
-       font-size: 30px;
-      }
-    }
-  h2 span{
-    color:yellow;
-  }
+    align-items: end;
+    justify-content: center;
+    font-size: calc($indexSize*1.4);
+    color: $baseTextColor;
+
+
   }
 }

@@ -1,11 +1,11 @@
-import React, {useEffect, useState, useRef, useLayoutEffect} from 'react';
+import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import styles from './header.module.scss';
 import bg from './HeaderImgTop.webp'
-import {gsap} from 'gsap'
+import { gsap } from 'gsap'
 import ScrollTrigger from "gsap/ScrollTrigger";
 import '../../App.scss'
 import SocialLinks from "../SocialLinks/SocialLinks";
-import {ReactComponent as Scroll} from "../../assets/svg/scroll.svg";
+import { ReactComponent as Scroll } from "../../assets/svg/scroll.svg";
 import Navigation from "../Navigation/Navigation";
 
 gsap.registerPlugin(ScrollTrigger)
@@ -15,7 +15,7 @@ interface HeaderProps {
     scroll: number
 }
 
-const Header: React.FC<HeaderProps> = ({scroll}) => {
+const Header: React.FC<HeaderProps> = ({ scroll }) => {
 
     const [toggleBurger, setToggleBurger] = useState(false);
     const navRef = useRef(null)
@@ -65,26 +65,20 @@ const Header: React.FC<HeaderProps> = ({scroll}) => {
     }, []);
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
-            gsap.timeline()
-                .fromTo('.name', {
-                    x: -400,
-                    opacity: 0,
-                }, {
-                    x: 0,
-                    opacity: 1,
-                    duration: 1
-                })
-                .fromTo('.subtitle', {
-                    xPercent: 200,
-                    opacity: 0
-                }, {
-                    xPercent: 0,
-                    opacity: 1,
-                    duration: .7
-                })
-                .from('.svgLogo', {
-                    scale: 0,
-                })
+            gsap.from('.name', {
+                opacity: 0,
+                x: 200,
+                duration: .9,
+                delay: 1
+            })
+            gsap.from('.subtitle', {
+                opacity: 0,
+                x: 100,
+                duration: .9,
+                delay: 1.4
+            })
+
+
 
             //scroll
             gsap.timeline()
@@ -92,38 +86,19 @@ const Header: React.FC<HeaderProps> = ({scroll}) => {
                     scrollTrigger: {
                         trigger: headerContentRef.current,
                         start: 'top top',
-                        scrub: 2,
-                    },
-                    ease: 'none',
-                    xPercent: -100,
-                    scale: 0,
-                })
-                .fromTo('.svgLogo', {
-                    scrollTrigger: {
-                        trigger: headerContentRef.current,
-                        start: 'top top',
-                        scrub: true,
-                    },
-                    y: 0,
-                    opacity: 1
-                }, {
-                    scrollTrigger: {
-                        trigger: headerContentRef.current,
-                        start: '20% top',
-                        end: '+=300',
                         scrub: 3,
                     },
-                    y: -400,
-                    opacity: 0
+                    ease: 'none',
+                    xPercent: 100,
                 })
                 .to('.subtitle', {
                     scrollTrigger: {
                         trigger: headerContentRef.current,
                         start: 'top top',
-                        end: '+=300',
                         scrub: 3,
                     },
-                    x: -800
+                    xPercent: -200,
+
                 })
 
 
@@ -136,19 +111,16 @@ const Header: React.FC<HeaderProps> = ({scroll}) => {
             <div className={!toggleBurger ? `${styles.burgerMenu}` : `${styles.burgerMenu} ${styles.show}`}>
                 {ul}
             </div>
-            <img className={styles.headerBG} src={bg} alt="background"/>
-            <Navigation ul={ul} setToggleBurger={setToggleBurger} toggleBurger={toggleBurger}/>
+            <img className={styles.headerBG} src={bg} alt="background" />
+            <Navigation ul={ul} setToggleBurger={setToggleBurger} toggleBurger={toggleBurger} />
             <div className='container'>
                 <div className={scroll < 600 ? `${styles.aboutMe} ` : `${styles.aboutMe}`}>
                     <h1 className='name'>Drynkin Sergey</h1>
-                    <h2 className='subtitle'><span>Front-end Developer</span></h2>
-                    <div className='svgLogo'>
-                        <SocialLinks/>
+                    <h3 className='subtitle'><span>Frontend Developer</span></h3>
 
-                    </div>
                 </div>
             </div>
-            {scroll <= 150 && <Scroll className={styles.scroll}/>}
+            {scroll <= 150 && <Scroll className={styles.scroll} />}
         </header>
     );
 }

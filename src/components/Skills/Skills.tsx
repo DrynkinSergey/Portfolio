@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
+import { gsap } from "gsap";
+
+import ScrollTrigger from "gsap/ScrollTrigger";
 import bg from '../../assets/img/skillsBg.webp'
 import styles from './skills.module.scss'
 import SkillsList from './skillsList';
@@ -7,6 +10,39 @@ type Props = {
     scroll: number
 }
 const Skills: React.FC<Props> = ({ scroll }) => {
+
+    const skillsRef = useRef(null)
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        let ctx = gsap.context(() => {
+            const tl = gsap.timeline();
+
+
+            tl.from('.title', {
+                scrollTrigger: {
+                    trigger: skillsRef.current,
+                    start: '-500',
+                    end: '+=150',
+                    scrub: 2
+                },
+                yPercent: 50,
+                opacity: 0
+            })
+            tl.from('li', {
+                scrollTrigger: {
+                    markers: true,
+                    trigger: skillsRef.current,
+                    start: '-200',
+                    end: '190',
+                    scrub: 2
+                },
+                stagger: .1,
+                scale: 0
+            })
+
+        }, skillsRef);
+        return () => ctx.revert();
+    }, []);
     const skillsUsingNow = [{
         name: 'js',
         title: 'javascript'
@@ -53,8 +89,8 @@ const Skills: React.FC<Props> = ({ scroll }) => {
     },
     ]
     return (
-        <section id='skills' className={styles.skills} >
-            <img className={styles.bg} src={bg} alt="" />
+        <section id='skills' ref={skillsRef} className={styles.skills} >
+            <img className={styles.bg} src={bg} alt="bg" />
             <h1 className='title'>Skills</h1>
             <div className='container'>
                 <h2 className={styles.skillsTitle}>Using now:</h2>
