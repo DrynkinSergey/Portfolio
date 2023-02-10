@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.c06616bf.css",
-    "main.js": "/Portfolio/static/js/main.0d1ea6f9.js",
+    "main.css": "/Portfolio/static/css/main.ef87d6c3.css",
+    "main.js": "/Portfolio/static/js/main.912877c7.js",
     "static/media/Frontend_Drynkin_Sergey_CV.pdf": "/Portfolio/static/media/Frontend_Drynkin_Sergey_CV.4b438031db6f016745e0.pdf",
     "static/media/HeaderImgTop.webp": "/Portfolio/static/media/HeaderImgTop.ecaf1c77a5320b24f175.webp",
     "static/media/yt.webp": "/Portfolio/static/media/yt.16d45e7741d7f4b9fd56.webp",
@@ -19,15 +19,14 @@
     "static/media/skillsBg.webp": "/Portfolio/static/media/skillsBg.beb35c9f9c53b669d13f.webp",
     "static/media/footerBg.webp": "/Portfolio/static/media/footerBg.9ad0c75bf97a0269035f.webp",
     "static/media/instagram.svg": "/Portfolio/static/media/instagram.cf188395babdbe46646b39c3c76c8464.svg",
-    "static/media/scroll.svg": "/Portfolio/static/media/scroll.d3ad0a8c5dcaa6868ddbc75dcd53e117.svg",
     "static/media/github.svg": "/Portfolio/static/media/github.07b4a78ec30195c3214ee1aac9b53549.svg",
     "static/media/linkedin.svg": "/Portfolio/static/media/linkedin.b4db7e288def9f61c3425e36908bc6cb.svg",
     "index.html": "/Portfolio/index.html",
-    "main.c06616bf.css.map": "/Portfolio/static/css/main.c06616bf.css.map",
-    "main.0d1ea6f9.js.map": "/Portfolio/static/js/main.0d1ea6f9.js.map"
+    "main.ef87d6c3.css.map": "/Portfolio/static/css/main.ef87d6c3.css.map",
+    "main.912877c7.js.map": "/Portfolio/static/js/main.912877c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.c06616bf.css",
-    "static/js/main.0d1ea6f9.js"
+    "static/css/main.ef87d6c3.css",
+    "static/js/main.912877c7.js"
   ]
 }
