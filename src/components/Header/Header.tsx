@@ -1,39 +1,34 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
 import styles from './header.module.scss';
 import bg from './HeaderImgTop.webp'
 import { gsap } from 'gsap'
 import ScrollTrigger from "gsap/ScrollTrigger";
 import '../../App.scss'
-import SocialLinks from "../SocialLinks/SocialLinks";
-import { ReactComponent as Scroll } from "../../assets/svg/scroll.svg";
 import Navigation from "../Navigation/Navigation";
 
 gsap.registerPlugin(ScrollTrigger)
 
 
-interface HeaderProps {
-    scroll: number
-}
 
-const Header: React.FC<HeaderProps> = ({ scroll }) => {
+
+const Header: React.FC = () => {
 
     const [toggleBurger, setToggleBurger] = useState(false);
     const navRef = useRef(null)
 
     const ul = <ul ref={navRef}>
-        <li id='nav' onClick={() => scrollToSection('home')} className={scroll <= 599 ? `${styles.active}` : ''}>Home
+        <li id='nav' onClick={() => scrollToSection('home')}>Home
         </li>
-        <li id='nav' onClick={() => scrollToSection('about')}
-            className={(scroll >= 600 && scroll <= 1399) ? `${styles.active}` : ''}>About
+        <li id='nav' onClick={() => scrollToSection('about')}>About
         </li>
         <li id='nav' onClick={() => scrollToSection('skills')}
-            className={(scroll >= 1400 && scroll <= 2199) ? `${styles.active}` : ''}>Skills
+        >Skills
         </li>
         <li id='nav' onClick={() => scrollToSection('works')}
-            className={(scroll >= 2200 && scroll <= 3099) ? `${styles.active}` : ''}>Works
+        >Works
         </li>
         <li id='nav' onClick={() => scrollToSection('contact')}
-            className={scroll >= 3100 ? `${styles.active}` : ''}>Contact
+        >Contact
         </li>
     </ul>;
 
@@ -114,13 +109,13 @@ const Header: React.FC<HeaderProps> = ({ scroll }) => {
             <img className={styles.headerBG} src={bg} alt="background" />
             <Navigation ul={ul} setToggleBurger={setToggleBurger} toggleBurger={toggleBurger} />
             <div className='container'>
-                <div className={scroll < 600 ? `${styles.aboutMe} ` : `${styles.aboutMe}`}>
+                <div className={styles.aboutMe}>
                     <h1 className='name'>Drynkin Sergey</h1>
                     <h3 className='subtitle'><span>Frontend Developer</span></h3>
 
                 </div>
             </div>
-            {scroll <= 150 && <Scroll className={styles.scroll} />}
+
         </header>
     );
 }

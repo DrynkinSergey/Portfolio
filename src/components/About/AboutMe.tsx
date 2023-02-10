@@ -7,11 +7,9 @@ import { gsap } from "gsap";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-interface AboutProps {
-    scroll: number
-}
 
-const AboutMe: React.FC<AboutProps> = ({ scroll }) => {
+
+const AboutMe: React.FC = () => {
     const saveFile = () => {
         saveAs(
             // @ts-ignore

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import styles from "./works.module.scss"
 import workImg from "../../assets/img/bgWorkNone.png";
+import { gsap } from 'gsap'
 
 import coffee from '../../assets/img/portfolio/coffeeLight.webp'
 import yt from '../../assets/img/portfolio/yt.webp'
@@ -61,12 +62,28 @@ const Works = () => {
 
   ];
 
-  const [project, setProject] = React.useState(projects[0]);
+  const worksRef = useRef(null)
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.timeline()
+        .fromTo('#worksImg img', {
+          y: 50,
+        }, {
+          scrollTrigger: {
+            trigger: '#worksImg',
+            scrub: 2,
+            start: 'top 90%',
+          },
 
-
+          y: 0,
+          stagger: .3
+        })
+    }, worksRef);
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section id='works' >
+    <section id='works' ref={worksRef} >
 
       <div className={styles.myWorks}>
         <h1 className='title'>Portfolio</h1>
@@ -79,7 +96,7 @@ const Works = () => {
           </ul>
         </div>
         <div className="container">
-          <div className={styles.portfolio_img_wrapper}>
+          <div id='worksImg' className={styles.portfolio_img_wrapper}>
             <img src={spendtime} alt="portfolioWork" />
             <img src={yt} alt="portfolioWork" />
             <img src={pizza} alt="portfolioWork" />

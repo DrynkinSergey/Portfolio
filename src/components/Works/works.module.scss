@@ -2,7 +2,6 @@
 
 .myWorks {
 
-
   .filter {
     display: flex;
     justify-content: center;
@@ -14,7 +13,7 @@
     li {
       padding: 4px 20px;
       list-style: none;
-      color: $baseTextColor;
+      color: $secondTextColor;
       border-bottom: 2px solid gray;
 
       &.active {

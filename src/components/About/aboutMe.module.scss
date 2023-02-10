@@ -10,23 +10,29 @@
   grid-template-areas:
     "imgMe right ";
 
-  @media (max-width: 620px) {
+  @media (max-width: $sm) {
     display: flex;
     flex-direction: column;
   }
 
   .sectionTitle {
     margin-top: 4vh;
+    will-change: true;
   }
 
   &_wrapper {
+    padding: 0 $indexSize;
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-size: calc($indexSize*1.3);
     gap: $indexSize;
 
     button {
-      width: calc($indexSize*10);
+      padding: calc($indexSize*.5);
+      width: 50%;
+      margin: 0 auto;
+
     }
   }
 

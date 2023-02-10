@@ -6,10 +6,8 @@ import bg from '../../assets/img/skillsBg.webp'
 import styles from './skills.module.scss'
 import SkillsList from './skillsList';
 
-type Props = {
-    scroll: number
-}
-const Skills: React.FC<Props> = ({ scroll }) => {
+
+const Skills: React.FC = () => {
 
     const skillsRef = useRef(null)
     useLayoutEffect(() => {
@@ -30,7 +28,6 @@ const Skills: React.FC<Props> = ({ scroll }) => {
             })
             tl.from('li', {
                 scrollTrigger: {
-                    markers: true,
                     trigger: skillsRef.current,
                     start: '-200',
                     end: '190',
